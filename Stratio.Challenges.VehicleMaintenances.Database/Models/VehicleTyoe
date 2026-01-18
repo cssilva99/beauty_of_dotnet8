@@ -1,0 +1,20 @@
+public enum VehicleType { Truck, Bus, Van, Electric }
+
+public class Vehicle
+{
+    public Guid Id { get; set; }
+
+    [Required]
+    [MaxLength(17)] // O VIN always had 17 caracters
+    public string VIN { get; set; } = string.Empty;
+
+    [Required]
+    [MaxLength(10)]
+    public string LicensePlate { get; set; } = string.Empty;
+
+    public VehicleType Type { get; set; }
+
+    // Relation
+    public ICollection<TelemetrySnapshot> Telemetries { get; set; } = new List<TelemetrySnapshot>();
+    public ICollection<DtcEvent> DtcEvents { get; set; } = new List<DtcEvent>();
+}
