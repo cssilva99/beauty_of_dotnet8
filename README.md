@@ -1,6 +1,16 @@
 # Frameworks
 .NET 8 - The beauty of Entity Framework
 
-📄 License
+(.NET 9 is not Backward Compatible)
 
-This project is distributed under the MIT License. Please note that the software is provided "as is", and the author holds no legal responsibility for any errors caused by its use.
+Ele cruza o código com a Telemetria.
+
+Scenario: 
+
+1. A truck sends a high temperature DTC
+2. Backend will automatically check if de colling liquid is low
+3.Is the truck going up a mountain?
+
+History: 
+
+If a vehicle sends the same DTC on and off and on and off, the algorythm can predict that it will fail in the next 500 kilometers
